@@ -1,0 +1,19 @@
+<?php $_datasets = $this->getDatasets() ?>
+
+<h3><a href="<?php echo Mage::helper('ism_news')->getListNewsUrl() ?>">
+        <?php echo $this->getData('title') ?>
+    </a>
+</h3>
+
+<?php if ($_datasets): ?>
+    <?php foreach ($_datasets as $_item): ?>
+    <div class="news-style">
+        <h3><?php echo $_item->getTitle() ?></h3>
+        <p><?php echo $_item->getContent() ?></p>
+        <div>
+            <span><?php echo $_item->getAnnounce() ?></span><br/>
+            <span><?php echo $_item->getPublish_date() ?></span>
+        </div>
+    </div>
+    <?php endforeach; ?>
+<?php endif; ?>

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <news_index_index>
+        <reference name="content">
+            <!--<block type="news/news" name="news"/>-->
+            <block type="core/template" name="news" template="news/news.phtml" />
+        </reference>
+    </news_index_index>
+    <news_index_detail>
+        <reference name="content">
+            <block type="core/template" name="news" template="news/detail.phtml"/>
+        </reference>
+    </news_index_detail>
+</layout>

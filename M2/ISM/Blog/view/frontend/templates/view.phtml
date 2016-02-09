@@ -1,0 +1,17 @@
+<?php
+/** @var $block \ISM\Blog\Block\PostView */
+/** @var $post \ISM\Blog\Model\Post */
+$post = $block->getPost();
+?>
+<h1 class="blog-post-item-title"><?php echo $post->getTitle() ?></h1>
+<div class="blog-post-item-content">
+    <?php if(!empty($post->getImageUrl())): ?>
+        <img src="<?php echo $block->getPostImageUrl() ?>"
+    <?php endif; ?>
+    <div class="description">
+        <?php echo $post->getDescription() ?>
+    </div>
+</div>
+<div class="blog-post-item-meta">
+    <strong><?php echo __('Created at:') ?></strong> <?php echo $post->getCreatedAt() ?>
+</div>

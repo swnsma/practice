@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<layout version ="0.1.0">
+    <default>
+        <reference name="right">
+            <block type="core/template" before="catalog.compare.sidebar" template="ism/productextra.phtml" name="right.red.square"/>
+        </reference>
+        <reference name="head">
+            <action method="addCss"><stylesheet>css/news-style.css</stylesheet></action>
+        </reference>
+    </default>
+    <news_index_index>
+        <reference name="root">
+            <action method="setTemplate"><template>page/2columns-right.phtml</template>
+            </action>
+        </reference>
+        <reference name="content">
+            <block type="ism_news/page" template="ism/news/news.phtml" name="newsblock"/>
+        </reference>
+    </news_index_index>
+    <news_index_detail>
+        <reference name="root">
+            <action method="setTemplate"><template>page/2columns-right.phtml</template>
+            </action>
+        </reference>
+        <reference name="content">
+            <block type="ism_news/detail" name="news" template="ism/news/detail.phtml"/>
+        </reference>
+    </news_index_detail>
+</layout>

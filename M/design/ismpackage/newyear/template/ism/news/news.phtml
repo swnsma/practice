@@ -1,0 +1,17 @@
+<h4><?php echo $this->__('News List') ?></h4>
+<?php $_datasets = $this->getDatasets() ?>
+
+<?php foreach ($_datasets as $_item): ?>
+    <?php if ($_item->getPublished()): ?>
+    <div class="news-style">
+        <h4>
+            <a href="<?php echo Mage::helper('ism_news')->getNewsUrl($_item->getId()) ?>">
+                <?php echo $_item->getTitle() ?>
+            </a>
+        </h4>
+        <p><?php echo $_item->getContent() ?></p>
+        <span><?php echo $_item->getAnnounce() ?></span><br/>
+        <span><?php echo $_item->getPublishDate() ?></span>
+    </div>
+    <?php endif; ?>
+<?php endforeach; ?>
