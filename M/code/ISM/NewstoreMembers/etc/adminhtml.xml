@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<config>
+    <menu>
+        <newstore_members module="ism_newstore_members">
+            <title>Newstore Members</title>
+            <sort_order>72</sort_order>
+            <children>
+                <item module="ism_newstore_members">
+                    <title>Manage Members</title>
+                    <sort_order>0</sort_order>
+                    <action>ism_newstore_members/adminhtml_members</action>
+                </item>
+                <import_newstore module="ism_newstore_members">
+                    <title>Import Prices</title>
+                    <sort_order>1</sort_order>
+                    <action>ism_newstore_members/adminhtml_import</action>
+                </import_newstore>
+            </children>
+        </newstore_members>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <newstore_members module="ism_newstore_members">
+                        <title>Newstore Members</title>
+                        <sort_order>0</sort_order>
+                        <children>
+                            <item module="ism_newstore_members">
+                                <title>Manage Members</title>
+                                <action>ism_newstore_members/adminhtml_members</action>
+                            </item>
+                            <import_newstore module="ism_newstore_members">
+                                <title>Import Prices</title>
+                                <sort_order>1</sort_order>
+                                <action>ism_newstore_members/adminhtml_import</action>
+                            </import_newstore>
+                        </children>
+                    </newstore_members>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>
